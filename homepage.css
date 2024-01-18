@@ -1,0 +1,133 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+h1 {
+  position: relative;
+  font-size: 10vw;
+  color: blue;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  animation: changeFont 10s linear infinite;
+  height: 10vw; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow */
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #afafaf;
+  font-size: 2vw;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 2px;
+}
+
+button,
+a {
+  margin: 10px auto;
+  font-size: 14px;
+  width: 200px;
+  padding: 10px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#GET_STARTED:hover,
+#SOURCE:hover {
+  background-color: blue;
+}
+
+/* Menubar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-icon {
+  padding-left: 1vw;
+  font-size: 2vw;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+#main-menu {
+  display: none;
+  position: fixed;
+  top: 60px; /* Adjust this value to position the dropdown */
+  left: 0;
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#main-menu ul {
+  font-family: sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-menu li {
+  margin: 10px 0;
+}
+
+#main-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#main-menu a:hover {
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Optional: to inherit the color from the parent */
+}
+
+section {
+  margin-top: 20vh; /* Adjust the value to your preference */
+}
+
+/* Add these styles for the new classes */
+.red-text {
+  color: rgb(255, 0, 0);
+}
+
+.blue-text {
+  color: rgba(
+    0,
+    0,
+    255,
+    0.7
+  ); /* Adjust the alpha value (0.7 in this example) for transparency */
+  position: absolute;
+  top: 0;
+  left: 50%; /* Adjust as needed */
+  transform: translateX(-50%);
+}

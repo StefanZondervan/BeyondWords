@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://use.typekit.net/mrh2dim.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shadowbook</title>
+  </head>
+  <body>
+    <header>
+      <!-- Add menu and help icons -->
+      <div id="menu-icon" onclick="toggleMenu()">☰</div>
+    
+  <!-- Left Sidebar Container -->
+  <div id="leftbar-container">
+
+    <!-- Background Color Tool Container -->
+    <div class="tool-container" id="bgColorToolContainer">
+      <label class="style-title" for="bgColorPicker">Background Color:</label>
+      <input type="color" id="bgColorPicker" value="#ffffff"> <!-- Default color is white -->
+    </div>
+
+<!-- Title Tools Container -->
+<div class="style-container" id="titleStyleContainer">
+  <div class="tool-container" id="titleToolContainer">
+    <div class="style-title">Title</div>
+    <div>
+      <label for="titleFontSelect">Font:</label>
+      <select id="titleFontSelect">
+        <option value="OpenDyslexic">Dyslexic</option>
+        <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+        <option value="arial">Arial</option>
+        <option value="sans-serif">Sans Serif</option>
+      </select>
+
+      <label for="titleColorPicker">Color:</label>
+      <input type="color" id="titleColorPicker" value="#000000">
+    </div>
+
+    <div>
+      <label for="titleSizeSlider">Size:</label>
+      <input type="range" id="titleSizeSlider" min="10" max="40" value="24" step="1">
+
+      <label for="titleFontWeightSlider">Weight:</label>
+      <input type="range" id="titleFontWeightSlider" min="100" max="900" value="400" step="100">
+    </div>
+  </div>
+</div>
+
+ <!-- Body Text Tools Container -->
+      <div class="tool-container" id="bodyTextToolContainer">
+        <div class="style-title">Body</div>
+      <div>
+        <label for="bodyTextFontSelect">Font:</label>
+        <select id="bodyTextFontSelect">
+          <option value="OpenDyslexic">Dyslexic</option>
+          <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+          <option value="arial">Arial</option>
+          <option value="sans-serif">Sans Serif</option>
+        </select>
+
+        <label for="bodyTextColorPicker">Color:</label>
+        <input type="color" id="bodyTextColorPicker" value="#000000">
+      </div>
+
+      <div>
+        <label for="bodyTextSizeSlider">Size:</label>
+        <input type="range" id="bodyTextSizeSlider" min="10" max="20" value="14" step="1" />
+
+        <label for="bodyFontWeightSlider">Weight:</label>
+        <input type="range" id="bodyFontWeightSlider" min="100" max="900" value="700" step="100" />
+      </div>
+      </div>
+
+<!-- Subtitle Tools Container -->
+<div class="tool-container" id="subtitleToolContainer">
+  <div>
+    <div class="style-title">Subtitle</div>
+    <label for="subtitleFontSelect">Font:</label>
+    <select id="subtitleFontSelect">
+      <option value="OpenDyslexic">Dyslexic</option>
+      <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+      <option value="arial">Arial</option>
+      <option value="sans-serif">Sans Serif</option>
+    </select>
+
+    <label for="subtitleColorPicker">Color:</label>
+    <input type="color" id="subtitleColorPicker" value="#000000">
+  </div>
+
+  <div>
+    <label for="subtitleSizeSlider">Size:</label>
+    <input type="range" id="subtitleSizeSlider" min="10" max="40" value="20" step="1">
+
+    <label for="subtitleFontWeightSlider">Weight:</label>
+    <input type="range" id="subtitleFontWeightSlider" min="100" max="900" value="400" step="100">
+  </div>
+</div>
+
+<!-- Italic Tools Container -->
+<div class="tool-container" id="italicToolContainer">
+  <div>
+    <div class="style-title">Italic</div>
+    <label for="italicFontSelect">Font:</label>
+    <select id="italicFontSelect">
+      <option value="OpenDyslexic">Dyslexic</option>
+      <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+      <option value="arial">Arial</option>
+      <option value="sans-serif">Sans Serif</option>
+    </select>
+
+    <label for="italicColorPicker">Color:</label>
+    <input type="color" id="italicColorPicker" value="#000000">
+  </div>
+
+  <div>
+    <label for="italicSizeSlider">Size:</label>
+    <input type="range" id="italicSizeSlider" min="10" max="40" value="16" step="1">
+
+    <label for="italicFontWeightSlider">Weight:</label>
+    <input type="range" id="italicFontWeightSlider" min="100" max="900" value="400" step="100">
+  </div>
+</div>
+
+<!-- Quote Tools Container -->
+<div class="tool-container" id="quoteToolContainer">
+  <div>
+    <div class="style-title">Quote</div>
+    <label for="quoteFontSelect">Font:</label>
+    <select id="quoteFontSelect">
+      <option value="OpenDyslexic">Dyslexic</option>
+      <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+      <option value="arial">Arial</option>
+      <option value="sans-serif">Sans Serif</option>
+    </select>
+
+    <label for="quoteColorPicker">Color:</label>
+    <input type="color" id="quoteColorPicker" value="#000000">
+  </div>
+
+  <div>
+    <label for="quoteSizeSlider">Size:</label>
+    <input type="range" id="quoteSizeSlider" min="10" max="40" value="18" step="1">
+
+    <label for="quoteFontWeightSlider">Weight:</label>
+    <input type="range" id="quoteFontWeightSlider" min="100" max="900" value="400" step="100">
+  </div>
+</div>
+
+<!-- Bold Tools Container -->
+<div class="tool-container" id="boldToolContainer">
+  <div>
+    <div class="style-title">Bold</div>
+    <label for="boldFontSelect">Font:</label>
+    <select id="boldFontSelect">
+      <option value="OpenDyslexic">Dyslexic</option>
+      <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+      <option value="arial">Arial</option>
+      <option value="sans-serif">Sans Serif</option>
+    </select>
+
+    <label for="boldColorPicker">Color:</label>
+    <input type="color" id="boldColorPicker" value="#000000">
+  </div>
+
+  <div>
+    <label for="boldSizeSlider">Size:</label>
+    <input type="range" id="boldSizeSlider" min="10" max="40" value="16" step="1">
+
+    <label for="boldFontWeightSlider">Weight:</label>
+    <input type="range" id="boldFontWeightSlider" min="100" max="900" value="700" step="100">
+  </div>
+</div>
+
+        <!-- Generate PDF button -->
+        <button id="generatePdfBtn" class="tool-container">Generate PDF</button>
+
+      <!-- Navigation menu -->
+      <nav id="main-menu">
+        <ul>
+          <li><a href="homepage.html">HOME</a></li>
+          <li><a href="index.html">BOOK</a></li>
+          <li><a href="source.html">SOURCE</a></li>
+        </ul>
+      </nav>
+    
+      <!-- Modal container for the steps -->
+      <div id="steps-modal" class="modal">
+        <div class="modal-content">
+          <ol>
+            <li>Select a piece of text</li>
+            <li>While the text is selected click on import</li>
+            <li>Edit this piece of text inside the edit portal</li>
+          </ol>
+        </div>
+      </div>
+    </header>
+    
+
+    <!-- Middle Container -->
+    <div id="middlebar-container">
+
+      <!-- Text Content Container -->
+      <div id="a4-container" class="text-container">
+        <div id="text-content"></div>
+        <div id="page-number">1</div>
+      </div>
+
+      <!-- Page Navigation Buttons -->
+      <div id="page-navigation">
+        <button id="prevPageBtn">Previous Page</button>
+        <button id="nextPageBtn">Next Page</button>
+      </div>
+
+            <!-- Page Navigation Slider -->
+            <input type="range" id="pageSlider" min="0" max="150" value="0" step="1" />
+
+<!-- Right Sidebar Container -->
+<div id="rightbar-container">
+  <!-- Centered Text Container -->
+  <div class="centered-text-container">
+  <h2>Welcome to Beyond Words</h2>
+
+  <p>Enhance your reading experience with our easy-to-use tools designed to personalize text. The left sidebar allows you to tweak the font size, font weight, font family, and text and background color tailoring the page to your preferences.</p>
+    
+  <p>Explore the possibilities of personalizing text and make your reading experience uniquely yours. Once you're satisfied, export your personalized page and enjoy your customized settings.</p>
+    
+  <p>Start personalizing now and enjoy your reading journey!</p>
+    
+  </div>
+</div>
+
+    <!-- Script -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
