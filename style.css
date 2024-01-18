@@ -1,0 +1,359 @@
+@font-face {
+  font-family: OpenDyslexic-Regular;
+  src: url(OpenDyslexic-Regular.otf);
+}
+
+@font-face {
+  font-family: OpenDyslexic-Bold;
+  src: url(OpenDyslexic-Bold.otf);
+}
+
+@font-face {
+  font-family: OpenDyslexic-Bold-Italic;
+  src: url(OpenDyslexic-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: OpenDyslexic-Italic;
+  src: url(OpenDyslexic-Italic.otf);
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-style: 0;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+
+/* A4 Container Styles */
+.text-container {
+  position: relative;
+  width: 600px;
+  height: 780px;
+  margin: 3vh auto;
+  padding: 2vw;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: white; /* Default background color */
+  font-family: "Georgia", serif;
+}
+
+/* Pseudo-elements for diagonal lines in the corners */
+#a4-container::before,
+#a4-container::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000000;
+}
+
+#a4-container::before {
+  top: 0px;
+  left: 0px;
+  border-top: none;
+  border-left: none;
+}
+
+#a4-container::after {
+  bottom: 0px;
+  right: 0px;
+  border-bottom: none;
+  border-right: none;
+}
+
+/* Page Number Styles */
+#page-number {
+  color: #000000;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the element horizontally */
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Update the styles for the page navigation container */
+#page-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Update the styles for the previous and next page buttons */
+#prevPageBtn,
+#nextPageBtn {
+  display: block;
+  font-size: 14px;
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px; /* Add margin to the sides */
+}
+
+#prevPageBtn:hover,
+#nextPageBtn:hover {
+  background-color: red;
+}
+
+#pageSlider {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  width: 11.5vw;
+}
+
+/* Text Styling Styles */
+.title {
+  color: #000000;
+  font-size: 22px;
+  font-style: 0;
+  font-weight: 900;
+  font-family: "OpenDyslexic-Regular";
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: #000000;
+  font-size: 16px;
+  font-style: 0;
+  font-weight: 500;
+  font-family: "OpenDyslexic-Bold";
+  font-weight: bold;
+}
+
+.italic {
+  color: #000000;
+  font-style: italic;
+  font-weight: 400;
+  font-family: "OpenDyslexic-Italic";
+}
+
+.quote {
+  color: #000000;
+  font-style: italic;
+  font-weight: 500;
+  font-family: "OpenDyslexic-Italic";
+  text-align: right; /* Align text to the right */
+  white-space: nowrap; /* Prevent line breaks */
+  margin-right: 0; /* Remove any default margin */
+}
+
+.bold {
+  color: #000000;
+  font-style: 0;
+  font-family: "OpenDyslexic-Bold";
+}
+
+.body-text {
+  color: #000000;
+  font-style: 0;
+  font-size: 12px;
+  font-family: "OpenDyslexic-Regular";
+}
+
+/* Left Sidebar Container Styles */
+#leftbar-container {
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column; /* Set to column to place elements vertically */
+  align-items: center; /* Center the content horizontally */
+  justify-content: center; /* Center the content vertically */
+}
+
+/* Style each tool container */
+.tool-container {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 2px solid blue; /* Add this line to set a red border */
+  color: blue;
+}
+
+.style-title {
+  text-align: center;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+  color: red;
+}
+
+/* Middle Container Styles */
+#middlebar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+#text-content span:hover {
+  background-color: #ffff00; /* Highlight color for hovered text */
+  color: #000000; /* Text color for hovered text */
+  cursor: pointer;
+}
+
+#generatePdfBtn {
+  display: block;
+  font-size: 14px;
+  padding: 8px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 0 10px; /* Adjust the margin to separate it from other tools */
+}
+
+#generatePdfBtn:hover {
+  background-color: blue;
+}
+
+/* Right Sidebar Container Styles */
+#rightbar-container {
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: blue; /* Change background color as needed */
+}
+
+/* Centered Text Container Styles */
+.centered-text-container {
+  padding: 80px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+/* Enable text selection */
+#text-content {
+  user-select: text;
+  cursor: text;
+}
+
+::selection {
+  background-color: #000000; /* Highlight color for selected text */
+  color: rgb(255, 255, 255); /* Text color for selected text */
+}
+
+/* Menubar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-icon {
+  padding-left: 1vw;
+  font-size: 2vw;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  position: absolute; /* Make sure it's positioned relative to the nearest positioned ancestor */
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Set a high z-index value to ensure it's in front of other elements */
+}
+
+#main-menu {
+  display: none;
+  position: fixed;
+  top: 60px; /* Adjust this value to position the dropdown */
+  left: 0;
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#main-menu ul {
+  font-family: sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-menu li {
+  margin: 10px 0;
+}
+
+#main-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#main-menu a:hover {
+  color: #000000;
+}
+
+/* Add these styles to your existing CSS */
+#help-icon {
+  padding-right: 2.2vw;
+  font-size: 2vw;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 60px; /* Adjust this value to position the dropdown */
+  right: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.modal-content {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Optional: to inherit the color from the parent */
+}

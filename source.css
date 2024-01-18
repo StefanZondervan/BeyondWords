@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+
+img {
+  width: 50vw;
+}
+
+h1 {
+  font-size: 61px;
+  color: blue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 2vw;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  padding-bottom: 1vh;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  font-size: 20px;
+  font-weight: 50;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.instructions-section {
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.icon {
+  width: 100px;
+}
+
+.arrow-icon {
+  width: 50px;
+  padding-bottom: 20vh;
+}
+
+.image-section {
+  text-align: center;
+}
+
+.text-section {
+  text-align: center;
+}
+
+.content-section {
+  height: auto;
+  width: 50vw;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  margin: 0 auto; /* Center the element within its container (assuming the container is the body) */
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  font-size: 14px;
+  padding: 8px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10vh;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+/* Menubar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-icon {
+  padding-left: 1vw;
+  font-size: 2vw;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+#main-menu {
+  display: none;
+  position: fixed;
+  top: 60px; /* Adjust this value to position the dropdown */
+  left: 0;
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#main-menu ul {
+  font-family: sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-menu li {
+  margin: 10px 0;
+}
+
+#main-menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#main-menu a:hover {
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Optional: to inherit the color from the parent */
+}
